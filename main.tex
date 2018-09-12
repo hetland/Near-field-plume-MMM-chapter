@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage[round]{natbib}
+
+\usepackage{fullpage}
+
+\usepackage{palatino}
+\usepackage{mathpazo}
+\usepackage{rotating}
+
+\usepackage[mathlines]{lineno}
+\usepackage{setspace}
+
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=3000
+\predisplaypenalty=3000
+\postdisplaypenalty=2000
+
+\begin{document}
+
+\vfill
+\noindent
+{\large\bfseries Spreading and mixing in near-field river plumes}\\
+\noindent
+{\scshape Robert D. Hetland}\\
+\noindent
+{\footnotesize Dept. of Oceanography, Texas A\&M University, College Station, TX}
+
+% \doublespacing
+% \linenumbers
+
+\begin{abstract}
+  \small{Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+\end{abstract}
+
+
+\section{Introduction}
+
+The estuary/river plume system convert terrestrial fresh water to brackish ocean seawater. While in some large systems, this brackish seawater may be observed thousands of kilometers from the source, generally the strong gradients in salinity are concentrated either within the estuary or near-field river plume. The near-field plume is often associated with energetic flows -- Froude numbers above one -- and intense mixing, but more generally can be considered to be the region of rapid transition in the character of the estuarine outflow. Though both both estuaries and near-field plumes can be characterized by large gradients in salinity over an area small compared to the continental shelf, and terrestrial water passing to the ocean must pass through both regions, estuaries and river plumes are often treated separately. One reason may be geographic; estuaries have clear boundaries, distinct ecosystems, and may be next to population centers that care about local water quality. Near-field river plumes on the other hand are ephemeral, have no distinct boundaries, and are not associated with any particular distinct ecosystem. Near-field plumes also have distinct dynamics -- supercritical flow detached from the bottom and not constrained latterally by the coastline -- with small timescales -- usually a few hours.
+
+% Motivation/challenges
+% \begin{itemize}
+%   \item Rapid transition/dilution
+%   \item Strong gradients
+%   \item Small scale (challenges for parameterization vs. resolution)
+%   \item High Froude number flows
+%   \item Possible very small scale, O(1) aspect flows near the front of unknown importance
+% \end{itemize}
+
+
+% \paragraph{Estistance 
+Not every river or estuary entering into the coastal ocean has an associated near-field plume. The mouth of the estuary needs to be narrow enough for hydraulic control to affect the outflow. For wide estuary mouths, rotation will become an important factor in determining the structure of the outflow. If the estuarine flow is given sufficient space, the bouyant estuarine outflow will form a trapped boundary current, hugging the righthand coast as the flow travels seaward. This process breaks the hydraulic control, as the structure of the flow exiting the estuary is determined by rotating dynamics, and not hydraulics. Thus, the first criterion for a near-field plume to exist is that the mouth be narrow compared to the deformation radius, or that the Kelvin number, $K$ -- the ratio between the width of the estuary mouth, $W$ and the deformation radius, $R_d = \sqrt{g' H} f^{-1}$ -- be small, $K = W R_d^{-1} \ll 1$. (Garvine, HDHM)
+
+Another condition for the existence of a substantial near-field plume is the presence of relatively quiescent receiving waters. This can be quantified by comparing the potential energy anomaly provided by the buoyant outflow to the dissipative energy associated with winds and tides (PritchardandHuntley); storms and strong tides can mix away a plume before it forms or strongly impact its evolution. In practice, because river discharge varies over many orders of magnitude across different systems and seasons, it is the input of potential energy by the buoyant outflow that is the strongest determining factor in forming a robust plume; large river systems have well defined plumes.
+
+The near-field plume is part of a series of regions that process fresh water from rivers by mixing and transporting water through the estuary/river plume system. The near-field plume is an important region because, though small relative to the other regions of the estuary/plume system, mixing can be intense, and a significant fraction of the total mixing that river water experiences through the estuary/plume system can occur in the near-field plume. In the next section, the dynamical regions surrounding the near-field river plume are examined in more detail.
+
+\section{Dynamical regions}
+
+Estuarine outflow defines the initial salinity and volume transport of the coastal plume.  If the mouth is narrow, a near-field plume will form, and salinity and momentum will be rapidly modified by intense mixing. Otherwise, the estuarine outflow will form a buoyancy driven coastal current where properties will change much more slowly; this type of flow is more a continuation of the flow patterns in the estuary, and is not as dynamically distinct as a near-field plume. A key difference between these two features is that the near-field plume is supercritical, with $Fr = U \sqrt{g' h} > 1$, so that momentum in the near-field plume is strong. The strong momentum in the near-field plume inhibits the immidiate formation of a rotating coastal current, and often directs the flow offshore. 
+
+As the near-field plume collapses and transitions back to subcritical flow, rotation becomes a dominant factor, and the flow is redirected toward the coast. This creates a recirculating bulge that has been the focus of a number of laboratory \citep{avicola.huq:03b,horner-devine.ea:06}, numerical \citep{fong.geyer:02,isobe:05}, and observational \citep{horner-devine:09,kudela.ea:10} studies. Connections between the near-field plume and the recirculating bulge are not yet clear, but there are two potential interactions that can influence the near-field plume circulation. First, the transition from (non-rotating) near-field jet to (rotating) bulge region is not abrupt, and rotational effects are important at the end of the near-field region \citep{cole.dissertation}; this may cause a shutdown in near-field plume spreading that then inhibits mixing. The second potential interaction is that the returning, up-coast flow in the recirculating bulge may interact with the near-field plume; the recirculating bulge water may place additional forces on the near-field plume, or modify the water that is entrained.
+
+Downcoast of the bulge region, an along-shore coastal current forms \citep{} that may be affected by tides \citep{deboer.ea:08,pritchard.huntley:06} or winds \citep{fong.geyer:01,hetland:05,lentz:04,jurisa.chant:13}. Though this region is typically much larger than the near-field plume, the influence of the near-field is important because the estuarine outflow may be significantly modified in the near-field. Many theoretical studies relate the structure of the coastal current flow to properties of the estuarine outflow, but in practice this should be related instead to the water properies leaving the near-field plume.
+
+% \paragraph{Liftoff}
+The initiation of the near-field plume is located at a point of internal hydraulic control. In practice this is usually bottom, topographic control from a tidal bar at the mouth of an estuary, like in the Merrimack \citep{macdonald.ea:07} or Fraser \citep{macdonald.geyer:05} rivers, however there are also cases where the control is created at the end of the jetties, where the channel width goes from finite to infinite, as in the case of some of the Mississippi Delta passes \citep{wright.coleman:71}. After the hydraulic control point, the seaward flow transitions to supercricital, and this supercritical flow characterizes the near-field plume.
+
+Supercritical flow influences the near-field plume in two ways. First, high Froude numbers imply low bulk Richardson numbers, where $Ri_b = g' h U^{-2} = Fr^{-2}$ which in turn implies the flow will be susceptible to internal Kelvin-Hemholtz instabilities. The second influence is that high Froude numbers imply strong advection, as the flow rate of the plume is high. This is generally associated, though not directly, with high Rossby numbers, $Ro = U (f L)^{-1}$, which in turn implies that rotation may not be a dominant factor in the flow. 
+
+% \paragraph{interior mixing, spreading}
+
+\paragraph{Plume frontal mixing}
+
+\paragraph{rotation and return to geostrophy}
+
+\begin{itemize}
+  \item Plume structure and processes acting inside the plume
+  \begin{itemize}
+    \item 
+  \end{itemize}
+  \item Plume frontal processes
+  \item Relative importance
+\end{itemize}
+
+
+
+Observationss
+
+\cite{wright.coleman:71}
+\cite{kilcher.nash:10}
+\cite{jay.ea:10}
+\cite{stashchuk.vlasenko:09}
+\cite{nash.ea:09}
+\cite{pritchard.huntley:06}
+\cite{garvine:91,garvine:87,garvine:84,garvine:82,garvine:74b,garvine:74}
+\cite{jay.ea:inpress}
+\cite{hetland.macdonald:08}
+\cite{chen.macdonald:06,orton.jay:05,nash.moum:05}
+\cite{pritchard.huntley:02}
+\cite{odonnell:90}
+\cite{odonnell.ea:98}
+
+\section*{Acknowledgements}
+
+
+\bibliographystyle{plainnat}
+\bibliography{hetland}
+
+\clearpage
+\listoffigures
+
+\clearpage
+%%% FIGURES
+
+\end{document}
+
