@@ -138,15 +138,22 @@ An equation for the evolution of the Froude number can be diagnosed from the set
 \end{equation}
 This equation demonstrates the interplay between mixing an spreading in the plume. In the case with no entrainment, $w_e = 0$, the Froude number always increases, since the near-field plume is defined by the region of supercritical flow, $Fr>1$. The increasing Froude number is due to the spreading, shoaling, and subsequent acceleration of the plume; the rate of spreading actually decreases as the plume advects offshore as the plume accelerates and the spreading rate decreases due to decreasing plume thickness. If mixing is included this term will eventually dominate as the Froude number increases -- this is true even if the mixing rate does not depend on the Froude number, but the effect is exacerbated if it does. When mixing dominates, the Froude number decreases offshore, and the rate of expansion increases resulting in a trumpet shaped plume. 
 
+The near-field plume is a supercritical feature, so the Froude number must increase from its initial value of one for the plume to have a region of supercriticality, in other words, $Fr_x|_{x=0}) > 1$. By Equation~\ref{eq:Fr_x}, this requires
+\begin{equation}
+    \frac{we W_0^2}{Q_0} < 2
+    \label{eq:criticality}
+\end{equation}
+at the estuary mouth, where the subscript $0$ indicates values of the width and volume transport at the mouth.
+
 Observations, idealized 3D models, and the simple near-field plume model all suggest that a typical structure is that the Froude number rapidly increases just outside the estuary mouth and quickly reaches a maximum of around 1.5 to 2. The Froude number then gradually decreases in the bulk of the plume where mixing dominates spreading. This region could be considered similar to an extended hydraulic jump, except for the fact that mixing is slow enough that the plume structure can substantially change over the extent of the mixing region.
 
 The ratio of vertically integrated kinetic energy, 
 \begin{equation}
-    KE_I = \int_{-\frac{W}{2}}^{\frac{W}{2}} \int_{-h}{0} \frac{1}{2} \rho_0 u^2 dz dx = \frac{1}{2} \rho_0 u^2 h W \quad ,
+    KE_I = \int_{-\frac{W}{2}}^{\frac{W}{2}} \int_{-h}^{0} \frac{1}{2} \rho_0 u^2 dz \, dx = \frac{1}{2} \rho_0 u^2 h W \quad ,
 \end{equation} 
 to vertically inegrated potential energy, 
 \begin{equation}
-    APE_I = \int_{-\frac{W}{2}}^{\frac{W}{2}} \int_{-h}{0} \frac{1}{2} \rho' g z\, dz dx = \frac{1}{2} \rho' g h^2 W \quad ,
+    APE_I = \int_{-\frac{W}{2}}^{\frac{W}{2}} \int_{-h}^{0} \frac{1}{2} \rho' g z\, dz \,dx = \frac{1}{2} \rho' g h^2 W \quad ,
 \end{equation}
 is given by $Fr^2$. The Froude number is thus describes the energy partitioning, but not the total energy in the plume. There are two ways to condider energy in the plume: following a parcel at the surface, and integrating across the entire plume. 
 
@@ -158,11 +165,11 @@ In the absence of mixing, $w_e = 0$, the total energy of a parcel at the free su
 
 The total integrated energy of the plume is more complicated. The change in the total integrated energy may then be calulated as
 \begin{equation}
-    \frac{\partial}{\partial x} \left( KE_I + APE_I \right) = \sqrt{g' h}\; \frac{h \sqrt{g' h} - w_e W (Fr^2 - \frac{1}{2})}{Fr(Fr^2 - 1)} \quad .
+    u \frac{\partial}{\partial x} \left( KE_I + APE_I \right) = \sqrt{g' h}\; \left( \frac{h \sqrt{g' h} - w_e W (Fr^2 - \frac{1}{2})}{Fr(Fr^2 - 1)}\right) \quad .
 \end{equation}
 Similar to the evolution of the Froude number, the total energy in the near-field plume increase away from the estuary mouth in the absence of mixing; entrainment reduces the total energy. The increase in energy can be thought of as a caused by pressure forces on the spreading plume. Consider a plume in an expanding channel, such that the expansion is prescribed and not calculated. Pressure forces at the boundaries accelerate the plume, like an inverse form drag. 
 
-
+A curious feature of the model is that the net mixing through the near-field plume, as defined by the dilution of the density anomaly at the point where the plume transitions back to subcritical is inversely proportional to the local mixing rate. An example of this is shown in Figure~\ref{fig:dilution}, where the final density anomaly of the plume, $\Delta \rho$, normalized by the initial density anomaly $\Delta \rho_0$, is plotted against the normalized entertainment velocity, $w_e W_0^2 / Q_0$. The motivation for this choice of normalization is discussed in detail in \citet{hetland:10a}, but can be seen as being inspired by the criticality condition in Equation~\ref{eq:criticality}. For the cases shown, the entrainment velocity is constant for each particular simulation, but varies across the parameter space, along with the initial width, $W_0$, initial volume flux of the estuarine outflow, $Q_0$, and initial density anomaly. The result that increased local mixing decreases net plume dilution is robust for different is consistent across different mixing parameterizations, but the functional relationship is shifted, and the collapse is not always as tight.
 
 \section{Complications to the simple plume model}
 
@@ -189,11 +196,11 @@ Near-field plume fronts can be regions of intense overturning and mixing. Observ
 
 Despite the fact that mixing at the front is clearly very intense, there is ongoing debate about what percentage of total net mixing within the plume that occurs at the plume front versus the supercritical flow region behind the plume front. \citet{pritchard.huntley:06} suggest that essentially all of the near-field plume mixing occurs within the front; \citet{orton.jay:05} suggest about 20\% of net mixing occurs within the Columbia plume front; \citet{cole:14} found even less net mixing within the plume front in a series of idealized experiments.
 
-To further emphasize the ambiguity in the interaction between the quasi-steady plume and plume front, idealized experiments using steady fresh water forcing suggest that as the plume front propagates, it exposes a steady near-field plume in it's wake. Thus, studies of mixing within a plume have used both perspectives of flow through a steady plume \citep{hetland:10a}, or a Lagrangian perspective following the plume front \citep{jay:??}. Though consceptually distinct, there is considerable overlap in the analytical methods used to solve these two problems.
+To further emphasize the ambiguity in the interaction between the quasi-steady plume and plume front, idealized experiments using steady fresh water forcing suggest that as the plume front propagates, it exposes a steady near-field plume in it's wake. Thus, studies of mixing within a plume have used both perspectives of flow through a steady plume \citep{hetland:10a}, or a Lagrangian perspective following the plume front \citep{jay:??}. Though conceptually distinct, there is considerable overlap in the analytical methods used to solve these two problems.
 
 \subsection{Rotation and return to geostrophy}
 
-High Froude numbers within a near-field plume imply strong advection. This is generally associated, though not directly, with high Rossby numbers, $Ro = U (f L)^{-1}$, which in turn implies that rotation may not be a dominant factor in the flow. A key factor is the timescale of flow through the near-field; if this timescale is on the order of, or longer than, the rotational timescale $f^{-1}$, the flow will likely be influenced by rotation. In practice, the timescales of flow through a near-field plume are rarely greater than an hour, so the the impact of rotation is primarily to lean the plume toward the downcoast direction, as defined by the direction of coastal Kelvin wave propagation. The result of this is that spreading may be suppressed by the turning of the plume, so that net plume mixing may be reduced as compared to a non-rotating plume \citep{cole.hetland:16}.
+High Froude numbers within a near-field plume imply strong advection. Thus high Froude numbers are generally associated with high Rossby numbers, $Ro = U (f L)^{-1}$, which in turn implies that rotation may not be a dominant factor in the flow. A key factor is the timescale of flow through the near-field; if this timescale is on the order of, or longer than, the rotational timescale $f^{-1}$, the flow will likely be influenced by rotation. In practice, the timescales of flow through a near-field plume are rarely greater than an hour, so the the impact of rotation is primarily to lean the plume toward the downcoast direction, as defined by the direction of coastal Kelvin wave propagation. But the result of even this minor influence of rotation is that spreading may be suppressed by the turning of the plume so that net plume mixing may be reduced as compared to a non-rotating plume \citep{cole.hetland:16}.
 
 
 % \begin{itemize}
